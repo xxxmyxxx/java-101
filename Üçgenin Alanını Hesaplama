@@ -16,6 +16,5 @@ public class alanhesaplama {
         alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
         System.out.println("Ucgenin alani: " + alan);
 
-
     }
 }
