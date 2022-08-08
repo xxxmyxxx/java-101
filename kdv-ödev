@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class kdvHesabi {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Lutfen Tutari Giriniz: ");
+        double tutar= scan.nextInt();
+
+        double kdv = (tutar<=1000) ? 0.08:0.18;
+
+        System.out.print("Kdvli tutar: "+(tutar+(tutar*kdv)));
+
+
+    }
+}
