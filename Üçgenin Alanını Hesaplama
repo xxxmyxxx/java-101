@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class alanhesaplama {
+    public static void main(String[] args) {
+        double u, alan;
+        int a, b, c;
+        Scanner girdi = new Scanner(System.in);
+        System.out.print("Ucgenin kenar uzunluklarini giriniz: " + "\nA:");
+        a = girdi.nextInt();
+        System.out.print("B:");
+        b = girdi.nextInt();
+        System.out.print("C:");
+        c = girdi.nextInt();
+
+        u = (a + b + c) / 2;
+        alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
+        System.out.println("Ucgenin alani: " + alan);
+
+
+    }
+}
