@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ortalama {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Lutfen notlarinizi giriniz" + "\nFizik: ");
+        int Fizik = scan.nextInt();
+        System.out.print("Kimya: ");
+        int Kimya = scan.nextInt();
+        System.out.print("Turkce: ");
+        int Turkce = scan.nextInt();
+        System.out.print("Tarih: ");
+        int Tarih = scan.nextInt();
+        System.out.print("Muzik: ");
+        int Muzik = scan.nextInt();
+
+        double ortalama = (Fizik + Kimya + Turkce + Tarih + Muzik) / 6;
+
+        System.out.println("Ortalamaniz: " + ortalama);
+        System.out.println((ortalama > 60) ? "Sinifi Gecti" : "Sinifta Kaldi");
+
+
+    }
+}
