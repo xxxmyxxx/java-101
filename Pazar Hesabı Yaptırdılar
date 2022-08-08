@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class pazar {
+    public static void main(String[] args) {
+        double armut=2.14,elma=3.67,domates=1.11,muz=0.95,patlican=5;
+        double a,e,d,m,p;
+        Scanner s=new Scanner(System.in);
+        System.out.print("Sirayla kiloyu gir --->"+"\narmut: "+"\nelma: "+"\ndomates: "+"\nmuz: "+"\npatlican: "+"\n");
+        a=s.nextDouble();
+        e=s.nextDouble();
+        d=s.nextDouble();
+        m=s.nextDouble();
+        p=s.nextDouble();
+        System.out.println("\narmut tutar: "+a*armut+"\nelma : "+e*elma+"\ndomates: "+domates*d+"\nmuz: "+muz*m+"\npatlican: "+p*patlican+"\n ");
+        double v = (a * armut) + (e * elma) + (domates * d) + (muz * m) + (p * patlican);
+        System.out.println("Toplam: "+ v);
+
+
+
+    }
+}
