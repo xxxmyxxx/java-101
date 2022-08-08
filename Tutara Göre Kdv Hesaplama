@@ -10,6 +10,5 @@ public class kdvHesabi {
 
         System.out.print("Kdvli tutar: "+(tutar+(tutar*kdv)));
 
-
     }
 }
