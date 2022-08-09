@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class kullanicigirisi {
+    public static void main(String[] args) {
+        String userName, password, npass, domestos, piril, select;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kullanici adinizi giriniz: ");
+        userName = input.nextLine();
+
+        System.out.print("Sifrenizi adinizi giriniz: ");
+        password = input.nextLine();
+
+        if (userName.equals("domestos") && password.equals("piril")) {
+            System.out.println("Giris Yaptiniz !");
+        } else {
+            System.out.println("Bilgileriniz yanlis !" +
+                    "\nUnuttunuz sanirim,sifrenizi sifirlamak istermisiniz ?" +
+                    "\nCevabiniz evet ise yes" +
+                    "\nHayir ise no yaz cigerim");
+            select = input.nextLine();
+            if (select.equals("no")) {
+                System.out.println("ikileyebilirsiniz...");
+            } else if (select.equals("yes")) {
+                System.out.print("Yeni sifrenizi giriniz: ");
+                npass = input.nextLine();
+
+                if (npass.equals("piril") || npass.equals("domestos")) {
+                    System.out.println("Hatali giris tekrar dene bakalim");
+                } else {
+                    System.out.println("sifreniz basari ile degisti");
+                }
+
+            } else {
+                System.out.println("hatali secim yaptiniz");
+            }
+
+        }
+
+
+    }
+
+
+}
+
+
+
+
+
