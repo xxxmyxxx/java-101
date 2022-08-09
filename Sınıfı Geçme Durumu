@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class sda {
+    public static void main(String[] args) {
+        int mat, f, k, t, m, a, b, c, d, zmat, zk, zt, zm, zf, e, toplam = 5;
+        Scanner scan = new Scanner(System.in);
+
+
+        System.out.print("Matematik notunuzu giriniz: ");
+        mat = scan.nextInt();
+        zmat = (mat <= 100 && mat >= 0) ? mat : 0;
+        a = (zmat == 0) ? --toplam : toplam;
+
+
+        System.out.print("fizik notunuzu giriniz: ");
+        f = scan.nextInt();
+        zf = (f <= 100 && f >= 0) ? f : 0;
+        b = (zf == 0) ? --toplam : toplam;
+
+        System.out.print("kimya notunuzu giriniz: ");
+        k = scan.nextInt();
+        zk = (k <= 100 && k >= 0) ? k : 0;
+        c = (zk == 0) ? --toplam : toplam;
+
+        System.out.print("turkce notunuzu giriniz: ");
+        t = scan.nextInt();
+        zt = (t <= 100 && t >= 0) ? t : 0;
+        d = (zt == 0) ? --toplam : toplam;
+
+        System.out.print("Muzik notunuzu giriniz: ");
+        m = scan.nextInt();
+        zm = (m <= 100 && m >= 0) ? m : 0;
+        e = (zm == 0) ? --toplam : toplam;
+
+
+        double ortalama = (zmat + zf + zk + zt + zm) / toplam;
+        System.out.println("Ortalamaniz: " + ortalama);
+        System.out.println((ortalama > 55) ? "Sinifi Gecti" : "Sinifta Kaldi");
+
+
+    }
+}
