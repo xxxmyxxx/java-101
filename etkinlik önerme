@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class etkinlikonerme {
+    public static void main(String[] args) {
+        int a, heat;
+        String b, c;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen sicaklik degerini giriniz");
+        heat = scan.nextInt();
+
+        if (5 >= heat) {
+            System.out.println("kayak yapmalisin");
+        } else if (heat <= 15) {
+            System.out.println("sinema nasil olur?");
+            if (heat == 15) {
+                System.out.println("veya piknik");
+            }
+        } else if (heat <= 25 && heat >= 15) {
+            System.out.println("piknik yapman gereken konular var..");
+        } else {
+            System.out.println("bu havada ne yuzulur ha !!!");
+        }
+
+
+    }
+}
