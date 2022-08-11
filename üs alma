@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class us {
+    public static void main(String[] args) {
+        int taban,us,i,result=1;
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Taban giriniz: ");
+        taban=scan.nextInt();
+        System.out.print("Us gir: ");
+        us=scan.nextInt();
+
+        for (i=1; i<=us; i++){
+            result*=taban;
+        }
+        System.out.println("Sonuc: "+result);
+    }
+}
