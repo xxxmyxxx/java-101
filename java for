@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class dowhile {
+    public static void main(String[] args) {
+        int sayi,i,k;
+
+        Scanner x = new Scanner(System.in);
+        System.out.print("Sinir sayisini giriniz: ");
+        sayi=x.nextInt();
+
+        for (i=4; i<=sayi; i*=4){
+            System.out.println(i);
+        }
+        for (k=5; k<sayi; k*=5){
+            System.out.println(k);
+        }
+    }
+}
