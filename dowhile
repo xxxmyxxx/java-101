@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class dowhile {
+    public static void main(String[] args) {
+        int total=0,sayi;
+
+        Scanner x=new Scanner(System.in);
+
+        do{
+            System.out.print("Bir sayi giriniz: ");
+            sayi=x.nextInt();
+            if(sayi%4==0){
+                total+=sayi;
+            }
+        }while (sayi%2==0);
+        System.out.println("Girilen degerlerin toplami: "+total);
+    }
+}
