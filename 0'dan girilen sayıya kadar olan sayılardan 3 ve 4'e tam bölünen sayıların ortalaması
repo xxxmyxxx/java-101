@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class deneme2 {
+    public static void main(String[] args) {
+        int input, i, k, b=0;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Sayi Giriniz: ");
+        input = scan.nextInt();
+
+        if (input % 12 != 0) {                
+            System.out.println("Girdiginiz sayi 3 ve 4 de tam bolunemez");
+        } else {
+                                                 
+            k = input / 12;                      
+            for (i = 0; i <=k-1; i++) {
+               b= -6 * i ;                 
+
+            }System.out.println(" 3 ve 4 ile bolumunden kalanlarin ortalamalari: " + (input + b));
+
+        }
+    }
+}
+// 3 v 4 ortak bölen sayılar aynı zamanda 12 ye de ortak bölünür
+// 12 ye tam bölünen sayıların ortalaması 12 için sayının kendisi 
+// 24 sayısı için (12 + 24) / 2 = 18 sayının 6 eksiği yani
+// 36 sayısı için (12 + 24 + 36) / 3 = 24 sayının 12 eksiği yani
+// bu şekilde gittiğini gördüğüm için for dönküsü ile artırdığım sayıları -6 ile çarpıp çıkardım.
