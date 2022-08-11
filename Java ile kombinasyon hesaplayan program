@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class dowhile {
+    public static void main(String[] args) {
+        int i,k,totaln=1,totalr=1,z,a,totalz=1;
+
+        Scanner x = new Scanner(System.in);
+        System.out.print("n degerini girin: ");
+        int n = x.nextInt();
+        System.out.print("r degerini girin: ");
+        int r = x.nextInt();
+
+        if(n < 0 || r < 0) {
+            System.out.println("Negatif sayilarin faktoriyeli yoktur.Tekrar deneme.");
+            System.exit(0);
+        }
+
+
+        for (i=1; i<=n; i++) {
+            totaln*=i;                   // n!
+        }
+
+        for (k=1; k<=r; k++){
+            totalr*=k;                    // r!
+        }
+
+
+        for (a=1; a<=(n-r); a++){
+            totalz*=a;                   //(n-r)!
+        }
+        System.out.println(n+"'in"+r+ " 'lu kombinasyonu = "+totaln/(totalr*(totalz)));
+    }
+}
