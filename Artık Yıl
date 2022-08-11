@@ -6,7 +6,6 @@ public class artikyil {
         System.out.print("Yil giriniz: ");
         int yil=scan.nextInt();
         
-
         if(yil%4==0 || yil%400==0) {
             System.out.println("Artik yildir");
         }
