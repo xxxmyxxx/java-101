@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class aaa {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Gir bakalım : ");
+        int sayi= scan.nextInt();
+        int toplam=0;
+
+        while (sayi!=0){           // 0 olana kadar devam et
+            int a=sayi%10;         // sayının ona bölümünden kalan a diyelim
+            toplam+=a;            // a yı döngüde topla bakalım
+            sayi/=10;             //sayıyı her seferinde 10 böl ki koşul 0 olup bitsin olsun
+
+        }
+        System.out.println("Girdiginiz sayinin basamak degerleri toplami: "+toplam);
+    }
+}
