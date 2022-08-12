@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class aaa {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Gir bakalim : ");
+        int sayi= scan.nextInt();
+        double k=0;
+
+       for(double i=1; i<=sayi; i++){
+          k+=1/i;
+
+       }System.out.println(k);
+    }
+}
