@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class deneme {
+    public static void main(String[] args) {
+        String pasword,userName;
+        int cekirge=3;
+        int chose,cek,yatir;
+        int mangirlar=1000;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kullanici adini giriniz: ");
+        userName=scan.nextLine();
+        System.out.print("Sifrenizi giriniz: ");
+        pasword= scan.nextLine();
+
+        if (userName.equals("1") && pasword.equals("2")){
+            System.out.println("Tebrikler dunyanin en iyi bankasina giris yapiniz ");
+            System.out.println("1-Mangir cek\n" +
+                    "2-Papel yatir\n" +
+                    "3-Kac param var ?\n" +
+                    "4-Cikar beni burdan");
+            System.out.print("Yapmak isteginiz islemi seciniz: ");
+            chose=scan.nextInt();
+
+            switch (chose){
+                case 1:
+                    System.out.print("Cekmek isteginiz tutari giriniz: ");
+                    cek=scan.nextInt();
+                    if(cek>mangirlar){
+                        System.out.println("Ektiginizden fazlasini bicemezsiniz..");
+                    }else{
+                        mangirlar-=cek;
+                        System.out.println("Cekme islemi basari ile tamamlandi kalan bakiyeniz: "+mangirlar);
+                    }
+                    break;
+                case 2:
+                    System.out.println("Yatirmak isteginiz tutari giriniz: ");
+                    yatir=scan.nextInt();
+                    mangirlar+=yatir;
+                    System.out.println("Cekme islemi basari ile tamamlandi kalan bakiyeniz: "+mangirlar);
+                    break;
+                case 3:
+                    System.out.println("Toplam bakiye: "+mangirlar);
+                    break;
+                case 4:
+                    System.out.println("Cikisınız yapiliyor...Yine bekleriz...Iyi gunler...");
+                default:
+                    System.out.println("Tus goz kordinasyonunuzu kontrol ediniz...");
+            }
+        }
+        else{
+            cekirge--;
+            System.out.println("Yanlis hareketler yapiyosun bak... cekirge 3 kere ziplar bilirsin" );
+            if(cekirge==0){
+                System.out.println("Sana 3 ziplayabilecegini söylemistim...");
+            }else{
+                System.out.println("Yine yanlis hareketler... kalan ziplama hakkin: "+cekirge);
+            }
+        }
+    }
+}
