@@ -1,1 +1,104 @@
+import java.util.Scanner;
 
+
+public class deneme {
+    static int plus(int a, int b) {
+        int result = a + b;
+        System.out.println("Toplam :" + result);
+        return result;
+    }
+
+    static int sour(int a, int b) {
+        int result = a - b;
+        System.out.println("Cikarma : " + result);
+        return result;
+    }
+
+    static int times(int a, int b) {
+        int result = a * b;
+        System.out.println("carpma : " + result);
+        return result;
+    }
+
+    static int bolme(int a, int b) {
+        if (b == 0) {
+            System.out.println("ikinci sayi 0 olamaz");
+            return 0;
+        }
+        int result = a / b;
+        System.out.println("bolme : " + result);
+        return result;
+    }
+
+    static int power(int a, int b) {
+        int result = 1;
+        for (int i = 1; i <= b; i++) {
+            result *= a;
+        }
+        return result;
+    }
+
+    static int mod(int a, int b) {
+        return a % b;
+    }
+
+    static void calc(int a,int b){
+        System.out.println("Cevresi : "+2*(a+b));
+        System.out.println("Alani: "+ a*b);
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String menu = "1- Toplama İşlemi\n"
+                + "2- Çıkarma İşlemi\n"
+                + "3- Çarpma İşlemi\n"
+                + "4- Bölme işlemi\n"
+                + "5- Üslü Sayı Hesaplama\n"
+                + "6- Faktoriyel Hesaplama\n"
+                + "7- Mod Alma\n"
+                + "8- Dikdörtgen Alan ve Çevre Hesabı\n"
+                + "0- Çıkış Yap";
+        System.out.println(menu);
+        while (true) {
+
+            System.out.println("Bir islem seciniz: ");
+            int select = scan.nextInt();
+
+            if (select == 0) {
+                break;
+            }
+            System.out.println("1.sayiyi giriniz : ");
+            int a = scan.nextInt();
+            System.out.println("2. sayiyi giriniz: ");
+            int b = scan.nextInt();
+
+            switch (select) {
+                case 1:
+                    plus(a, b);
+                    break;
+                case 2:
+                    sour(a, b);
+                    break;
+                case 3:
+                    times(a, b);
+                    break;
+                case 4:
+                    bolme(a, b);
+                    break;
+                case 6:
+                    System.out.println("mod islemi :" + mod(a, b));
+                    break;
+                case 7:
+                    System.out.println("us islemi :" + power(a, b));
+                    break;
+                case 8:
+                    calc(a,b);
+                    break;
+
+                default:
+                    System.out.println("Gecersiz Bir Sayi Girdiniz..");
+            }
+        }
+    }
+}
