@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String[][] B = new String[7][4];
+        for (int i = 0; i < B.length; i++) {
+            for (int j = 0; j < B[i].length; j++) {
+                if (i == 0 || i == 3 || i == 6) {
+                    B[i][j] = " * ";
+                    B[0][3] = " ";
+                    B[3][3] = " ";
+                    B[6][3] = " ";
+                } else if (j == 0 || j == 3) {
+                    B[i][j] = " * ";
+                } else {
+                    B[i][j] = "  ";
+                }
+            }
+        }
+        for (String[] row : B) {
+            for (String col : row) {
+                System.out.print(col);
+            }
+            System.out.println();
+
+        }
+    }
+}
