@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Dizinin boyutunu giriniz: ");
+        int diziBoyutu = scan.nextInt();
+        int[] dizi = new int[diziBoyutu];
+
+        for (int i = 0; i < diziBoyutu; i++) {
+            System.out.print((i + 1) + ". Sayiyi gir = > ");
+            dizi[i] = scan.nextInt();
+
+        }
+        Arrays.sort(dizi);
+        System.out.println(Arrays.toString(dizi));
+    }
+}
