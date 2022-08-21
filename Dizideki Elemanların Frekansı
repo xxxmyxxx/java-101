@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] list = {10, 20, 20, 10, 10, 20, 5, 20};
+        Arrays.sort(list);             //  5,10,10,10,20,20,20,20
+        int[] tekrarSayisi = new int[list.length];
+
+        for (int i = 0; i < list.length; i++) {
+            tekrarSayisi[i] = 1;
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[i] == list[j]) {
+                    tekrarSayisi[i]++;
+
+                }
+            }
+        }
+        //System.out.println(Arrays.toString(tekrarsayisi));
+        // 1,3,2,1,4,3,2,1
+
+        for (int i = 0; i < list.length; i++) {
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[i] == list[j]) {
+                    list[j] = 0;
+
+                }
+            }
+        }
+        //System.out.println(Arrays.toString(list));
+        // 5,10,0,0,20,0,0,0
+        for (int i = 0; i < list.length; i++) {
+
+            if ((tekrarSayisi[i] > 1) && (list[i] != 0)) {
+                System.out.println(list[i] + " sayisi " + tekrarSayisi[i] + " kere tekrar edildi.");
+
+
+            } else if (tekrarSayisi[i] == 1 && (list[i] != 0)) {
+                System.out.println(list[i] + "  sayisi " + tekrarSayisi[i] + " kere tekrar edildi.");
+
+            }
+        }
+    }
+}
